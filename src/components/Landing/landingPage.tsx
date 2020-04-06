@@ -1,13 +1,14 @@
 import React, { ReactElement } from 'react';
+import LoginButton from '../Login/loginButton';
+import SignupButton from '../SignUp/signupButton';
 
-const LandingPage = (): ReactElement => {
-  console.log('landing');
-
-  return  (
+const LandingPage = (): ReactElement => (
   <div>
-    Landing page
+    Welcome to our new Firebase App!
+    <br />
+    <LoginButton />
+    <SignupButton />
   </div>
 );
-};
 
 export default LandingPage;
