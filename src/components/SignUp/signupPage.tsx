@@ -36,7 +36,7 @@ const SignUpPage = ({ history }: SignupPageProps): ReactElement => {
     firebaseContext
       .doCreateUserWithEmailAndPassword(accountInfo.email, accountInfo.password1)
       .then(() => {
-        setAccountInfo(INITIAL_INFO);
+        // setAccountInfo(INITIAL_INFO);
         history.push(ACCOUNT);
       })
       .catch((errorMsg: FirebaseError) => {
@@ -66,7 +66,7 @@ const SignUpPage = ({ history }: SignupPageProps): ReactElement => {
       setErrorMessage(null);
     }
   }, [accountInfo]);
-
+  
   return (
     <div>
       Create your account here!
