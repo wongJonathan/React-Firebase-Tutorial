@@ -66,9 +66,7 @@ const SignUpPage = ({ history }: SignupPageProps): ReactElement => {
       setErrorMessage(null);
     }
   }, [accountInfo]);
-
-  console.log(accountInfo);
-
+  
   return (
     <div>
       Create your account here!
