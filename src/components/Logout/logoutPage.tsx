@@ -1,7 +1,9 @@
 import React, { ReactElement } from 'react';
 
 const LogoutPage = (): ReactElement => (
-  <div />
+  <div>
+    Logout page
+  </div>
 );
 
 export default LogoutPage;
