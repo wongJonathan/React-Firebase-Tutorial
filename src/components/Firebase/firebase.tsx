@@ -1,4 +1,4 @@
-import firebase from 'firebase/app';
+import firebase, { User } from 'firebase/app';
 import 'firebase/auth';
 
 const CONFIG = {
@@ -33,6 +33,10 @@ class Firebase {
   ): Promise<firebase.auth.UserCredential> => this.auth.signInWithEmailAndPassword(email, password);
 
   doSignOut = (): Promise<void> => this.auth.signOut();
+
+  onAuthStateChanged = (
+    callback: (user: User | null) => void,
+  ): firebase.Unsubscribe => this.auth.onAuthStateChanged(callback);
 }
 
 export default Firebase;

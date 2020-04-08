@@ -16,6 +16,7 @@ import AccountPage from '../Account/accountPage';
 import LoginPage from '../Login/loginPage';
 import LogoutPage from '../Logout/logoutPage';
 import SignUpPage from '../SignUp/signupPage';
+import withAuthentication from '../Session/withAuthentication';
 
 
 const App = (): ReactElement => (
@@ -28,4 +29,4 @@ const App = (): ReactElement => (
   </BrowserRouter>
 );
 
-export default App;
+export default withAuthentication(App);
