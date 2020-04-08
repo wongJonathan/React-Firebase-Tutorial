@@ -2,6 +2,7 @@ import React, { ReactElement, useContext } from 'react';
 import AuthUserContext from '../Session/authContext';
 import { User } from 'firebase';
 import withAuthorization from '../Session/withAuthorization';
+import LogOutButton from '../Logout/logoutButton';
 
 const AccountPage = (): ReactElement => {
   const authUser = useContext(AuthUserContext);
@@ -9,6 +10,7 @@ const AccountPage = (): ReactElement => {
   return (
     <div>
       Welcome to your account {authUser?.email}!
+      <LogOutButton />
     </div>
   )
 };
